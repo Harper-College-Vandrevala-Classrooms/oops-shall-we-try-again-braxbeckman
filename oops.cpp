@@ -4,14 +4,14 @@ using namespace std;
 
 int validation(int lowBound, int highBound, string prompt, string error)
 {
-  int input{};
+  std::string input{};
 
   cout << prompt << endl;
 
   while (true)
   {
     cin >> input;
-
+    if (isdigit(input))
     if (input < lowBound || input > highBound)
       cout << error;
     else
